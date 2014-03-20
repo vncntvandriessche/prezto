@@ -12,3 +12,27 @@ fi
 
 # Customize to your needs...
 
+#############
+## Exports ##
+#############
+
+export PASSWORD_STORE_DIR="";
+
+
+###########################
+## Environment variables ##
+###########################
+
+EDITOR=vim;
+VISUAL=vim;
+
+
+#############
+## Sources ##
+#############
+
+#chruby settings
+source '/usr/local/opt/chruby/share/chruby/auto.sh';
+source '/usr/local/opt/chruby/share/chruby/chruby.sh';
+## Default ruby version
+chruby 2.0.0-p247 &> /dev/null;

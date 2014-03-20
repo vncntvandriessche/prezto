@@ -17,7 +17,7 @@ fi
 #############
 
 export PASSWORD_STORE_DIR="";
-
+export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt;
 
 ###########################
 ## Environment variables ##

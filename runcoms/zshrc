@@ -17,8 +17,19 @@ fi
 ## Exports ##
 #############
 
-export PASSWORD_STORE_DIR="";
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt;
+# Load all configs before exporting
+config_list=(
+~/Documents/delicates/shell/config
+);
+
+for current_config in "${config_list[@]}"; do
+  echo "  - $current_config";
+  . $current_config;
+done;
+
+# Export
+export PASSWORD_STORE_DIR;
+export SSL_CERT_FILE;
 
 
 ###########################

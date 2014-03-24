@@ -35,4 +35,4 @@ VISUAL=vim;
 source '/usr/local/opt/chruby/share/chruby/auto.sh';
 source '/usr/local/opt/chruby/share/chruby/chruby.sh';
 ## Default ruby version
-chruby 2.0.0-p247 &> /dev/null;
+chruby 2.1.1 &> /dev/null;

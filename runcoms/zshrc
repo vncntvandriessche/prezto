@@ -12,12 +12,14 @@ fi
 
 # Customize to your needs...
 
+
 #############
 ## Exports ##
 #############
 
 export PASSWORD_STORE_DIR="";
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt;
+
 
 ###########################
 ## Environment variables ##
@@ -26,6 +28,17 @@ export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt;
 EDITOR=vim;
 VISUAL=vim;
 
+
+###########################
+## Aliases/Constants/... ##
+###########################
+
+# Aliases
+alias_dir="${ZDOTDIR:-$HOME}/.zprezto/runcoms/alias";
+
+[ -d "$alias_dir" ] && for current_alias in $(find $alias_dir -type f -or -type l -name '*.alias'); do
+    . $current_alias;
+done;
 
 #############
 ## Sources ##

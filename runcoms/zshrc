@@ -23,7 +23,6 @@ config_list=(
 );
 
 for current_config in "${config_list[@]}"; do
-  echo "  - $current_config";
   . $current_config;
 done;
 

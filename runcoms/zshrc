@@ -46,9 +46,17 @@ VISUAL=vim;
 # Aliases
 alias_dir="${ZDOTDIR:-$HOME}/.zprezto/runcoms/alias";
 
-[ -d "$alias_dir" ] && for current_alias in $(find $alias_dir -type f -or -type l -name '*.alias'); do
-    . $current_alias;
+[ -d "$alias_dir" ] && for current_alias in $( find $alias_dir -type f -or -type l -name '*.alias' ); do
+  . $current_alias;
 done;
+
+# Functions
+function_dir="${ZDOTDIR:-$HOME}/.zprezto/runcoms/function";
+
+[ -d "$alias_dir" ] && for current_function in $( find $function_dir -type f -or -type l -name '*.function' ); do
+  . $current_function;
+done;
+
 
 #############
 ## Sources ##

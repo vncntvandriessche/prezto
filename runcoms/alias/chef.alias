@@ -4,6 +4,6 @@
 ## Aliases ##
 #############
 
+alias 'knife.production'='CHEF_ENV=production \knife';
+alias 'knife.sandbox'='CHEF_ENV=sandbox \knife';
 alias knife="alias | grep 'knife.' | grep -v 'knife=' | cut -d '=' -f 1";
-alias 'knife.production'='CHEF_ENV=production knife';
-alias 'knife.sandbox'='CHEF_ENV=sandbox knife';

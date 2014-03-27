@@ -67,3 +67,14 @@ source '/usr/local/opt/chruby/share/chruby/auto.sh';
 source '/usr/local/opt/chruby/share/chruby/chruby.sh';
 ## Default ruby version
 chruby 2.1.1 &> /dev/null;
+
+
+#############
+## Startup ##
+#############
+
+# Start only the first session inside tmux.
+# This way, only one session can be running.
+if which tmux 2>&1 >/dev/null; then
+  test -z "$TMUX" && (tmux attach || tmux new-session);
+fi;

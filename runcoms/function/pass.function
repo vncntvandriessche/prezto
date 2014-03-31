@@ -7,7 +7,7 @@
 function cpd {
   location="$1";
   if [[ "$location" == '' ]]; then
-    location='$( pwd )';
+    location="$( pwd )";
   fi;
 
   export PASSWORD_STORE_DIR="$location";

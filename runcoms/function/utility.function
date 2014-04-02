@@ -1,0 +1,20 @@
+#!/bin/bash
+
+###############
+## Functions ##
+###############
+
+function strip_url {
+
+usage=$(cat <<  'EOF'
+Usage: strip_url
+
+    strip_url [--purge-www] target [ignored stuff]
+EOF
+);
+
+  [ $# -lt 1 ] && { echo "$usage" 1>&2; return 2; };
+  [ $# -gt 1 ] && [ "$1" = '--purge-www' ] || { echo "$usage" 1>&2; return 2; } && { purge='www\.'; shift; };
+
+  echo "$1" | sed "s/^https*:\/\/$purge\([^\/]*\)\/.*$/\1/";
+}

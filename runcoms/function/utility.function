@@ -16,7 +16,5 @@ EOF
   [ $# -lt 1 ] && { echo "$usage" 1>&2; return 2; };
   [ $# -gt 1 ] && { [ "$1" = '--purge-www' ] && { purge='www\.'; shift; } || { echo "$# -- $usage" 1>&2; return 2; } };
 
-  echo 'say wut: '$1;
-  echo 'and this?: '$purge;
   echo "$1" | sed "s/^https*:\/\/$purge\([^\/]*\)\/*.*$/\1/"
 }

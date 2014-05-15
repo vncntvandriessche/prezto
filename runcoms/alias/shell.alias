@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#############
+## Aliases ##
+#############
+
+alias 'history-full'="fc -l 0 $HISTSIZE";

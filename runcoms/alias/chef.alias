@@ -4,9 +4,10 @@
 ## Aliases ##
 #############
 
-for chef_app in knife bunka; do
+for chef_app in knife bunka berks; do
   alias "${chef_app}.production"="CHEF_ENV=production \\${chef_app}";
   alias "${chef_app}.sandbox"="CHEF_ENV=sandbox \\${chef_app}";
   alias "${chef_app}.dev"="CHEF_ENV=dev \\${chef_app}";
+  alias "${chef_app}.home"="CHEF_ENV=home.main.chef \\${chef_app}";
   alias knife="alias | grep '${chef_app}.' | grep -v '${chef_app}=' | cut -d '=' -f 1";
 done;

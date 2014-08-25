@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#############
+## Aliases ##
+#############
+
+alias 'public_ip'='curl http://wtfismyip.com/text';

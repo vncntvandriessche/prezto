@@ -18,3 +18,13 @@ EOF
 
   echo "$1" | sed "s/^https*:\/\/$purge\([^\/]*\)\/*.*$/\1/"
 }
+
+
+function get_gpg_details {
+  url="$1";
+  name="$( echo "$url" | sed 's/^.*\/\(.*\)$/\1/' )";
+  location="/tmp/${name}";
+  wget "$url" -O "$location" &> /dev/null;
+  gpg "$location";
+  rm -f "$location" &> /dev/null;
+}

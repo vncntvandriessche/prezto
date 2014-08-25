@@ -5,3 +5,4 @@
 #############
 
 alias 'history-full'="fc -l 0 $HISTSIZE";
+alias 'sed'='gsed';

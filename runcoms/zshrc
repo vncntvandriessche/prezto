@@ -49,6 +49,7 @@ export PASSWORD_STORE_DIR;
 export SSL_CERT_FILE;
 export LANG=en_US.UTF-8;
 export LC_CTYPE=en_US.UTF-8;
+export CURL_CA_BUNDLE;
 
 
 ###########################
@@ -67,7 +68,7 @@ VISUAL=vim;
 source '/usr/local/opt/chruby/share/chruby/auto.sh';
 source '/usr/local/opt/chruby/share/chruby/chruby.sh';
 ## Default ruby version
-chruby 2.1.1 &> /dev/null;
+chruby 2.1.2 &> /dev/null;
 
 
 #############
@@ -86,13 +87,3 @@ fi;
 
 # Raises ulimit for knife ssh
 ulimit -n 4096
-
-
-#############
-## Antigen ##
-#############
-
-source ~/.zprezto/modules/antigen.zsh;
-
-antigen bundle zsh-users/zsh-syntax-highlighting;
-antigen apply;
